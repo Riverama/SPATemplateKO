@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- the component is bound via the selected route's 'page' property, which corresponds to the 
+     name of the target's registered component, like 'contact-page' or 'default-page'  -->
+<div id="page" class="container" data-bind="component: { name: route().page, params: route }">
+</div>
+
+@section scripts {
+    <script type="text/javascript">  
+        // Load the main app module to start the app
+       requirejs(["startup"]);
+    </script>
+}
